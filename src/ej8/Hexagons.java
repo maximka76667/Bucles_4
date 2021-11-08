@@ -12,19 +12,19 @@ public class Hexagons {
 
 		System.out.print("Longitud del lado: ");
 		int longitud = entrada.nextInt();
-
-		int longitud_max = longitud * 2 - 1;
 		
 		System.out.println();
 
+		// Parte arriba
 		for(int i = 0; i < longitud - 1; i++) {
-			for(int j = 0; j < longitud_max / 2 - i; j++) System.out.print(" ");
+			for(int j = 0; j < (longitud * 2 - 1) / 2 - i; j++) System.out.print(" ");
 			for(int j = 0; j < longitud + i * 2; j++) System.out.print(symbol);
 			System.out.println();
 		}
 
+		// Parte media y baja
 		for(int i = longitud - 1; i >= 0; i--) {
-			for(int j = longitud_max / 2 - i; j > 0; j--) System.out.print(" ");
+			for(int j = (longitud * 2 - 1) / 2 - i; j > 0; j--) System.out.print(" ");
 			for(int j = longitud + i * 2; j > 0; j--) System.out.print(symbol);
 			System.out.println();
 		}
